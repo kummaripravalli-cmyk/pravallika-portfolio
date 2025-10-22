@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pravallika Kummari — Web Developer</title>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#7c3aed; --muted:#94a3b8; --white:#e6eef8;
+      --maxw:1000px; --radius:12px; font-family: Inter, system-ui, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#071028 0%,#08152a 100%);color:var(--white);display:flex;justify-content:center;padding:0 18px;}
+    .wrap{width:100%;max-width:var(--maxw);padding-top:80px;}
+    
+    /* Navigation */
+    nav{
+      position:fixed;top:0;left:0;right:0;
+      background:rgba(15,23,36,0.95);
+      backdrop-filter:blur(8px);
+      display:flex;justify-content:space-between;align-items:center;
+      padding:12px 24px;z-index:1000;box-shadow:0 2px 8px rgba(0,0,0,0.3);
+    }
+    nav .logo{font-weight:700;font-size:18px;color:var(--white);}
+    nav ul{list-style:none;display:flex;gap:20px;margin:0;padding:0;}
+    nav a{text-decoration:none;color:var(--muted);font-weight:600;transition:color .3s;}
+    nav a:hover{color:var(--accent);}
+    
+    /* Hero */
+    #home{text-align:center;margin:60px 0;}
+    #home h1{font-size:2.4rem;margin-bottom:8px;}
+    #home p{color:var(--muted);max-width:600px;margin:0 auto 20px;}
+    #home .btn{display:inline-block;padding:10px 20px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;transition:background .3s;}
+    #home .btn:hover{background:#6d28d9;}
+    
+    /* Header Card */
+    header{display:flex;gap:16px;align-items:center;margin-bottom:20px;background:rgba(255,255,255,0.03);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6);}
+    .avatar{width:88px;height:88px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;}
+    h1{margin:0;font-size:22px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    .buttons{display:flex;gap:10px;margin-top:8px;}
+    a.btn{display:inline-block;padding:8px 12px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;transition:background 0.3s;}
+    a.btn:hover{background:#6d28d9;}
+    
+    main{display:grid;grid-template-columns:1fr;gap:18px}
+    .card{background:rgba(255,255,255,0.03);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6);transition:transform 0.3s;}
+    .card:hover{transform:translateY(-3px);}
+    
+    .skills{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;}
+    .chip{background:rgba(255,255,255,0.04);padding:6px 10px;border-radius:999px;color:var(--muted);font-weight:600;transition:all .3s;}
+    .chip:hover{background:rgba(124,58,237,0.2);color:#fff;}
+    
+    .projects{display:grid;gap:12px}
+    .proj{display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)}
+    .proj .meta{color:var(--muted);font-size:13px}
+    footer{margin-top:12px;color:var(--muted);font-size:14px;text-align:center;padding:20px 0;}
+    
+    /* responsive */
+    @media(min-width:820px){
+      main{grid-template-columns:2fr 1fr;align-items:start}
+      header{justify-content:space-between}
+      .avatar{width:100px;height:100px;font-size:32px}
+      #home h1{font-size:3rem;}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Pravallika</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="wrap">
+    <!-- Hero Section -->
+    <section id="home">
+      <h1>Hi, I'm Pravallika 👋</h1>
+      <p>A passionate front-end developer building responsive, interactive web experiences using HTML, CSS, JavaScript, and Python.</p>
+      <a class="btn" href="#projects">View My Work</a>
+    </section>
+
+    <!-- Profile Header -->
+    <header>
+      <div style="display:flex;gap:14px;align-items:center">
+        <div class="avatar">PK</div>
+        <div>
+          <h1>PRAVALLIKA KUMMARI</h1>
+          <p class="lead">Aspiring Junior Software Developer — HTML | CSS | JavaScript | Python</p>
+          <div class="buttons">
+            <a class="btn" href="mailto:pravallikakummari14@gmail.com">Email</a>
+            <a class="btn" href="https://linkedin.com/in/pravallika-kummari-42333724a" target="_blank">LinkedIn</a>
+            <a class="btn" href="https://github.com/pravallika-kummari" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:right">
+        <div style="color:var(--muted);font-weight:600">Tadipatri, Andhra Pradesh</div>
+        <div style="margin-top:8px;color:var(--muted)">+91 8688691004</div>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <!-- About -->
+        <section id="about" class="card">
+          <h2>About</h2>
+          <p>I am a passionate front-end developer building responsive, accessible interfaces using HTML, CSS, and JavaScript, and expanding my programming with Python. I enjoy blending technical skills with creativity to deliver user-friendly designs. Currently building projects that showcase both UI design and functional code, and actively seeking entry-level roles to grow as a developer.</p>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="card" style="margin-top:12px">
+          <h2>Projects</h2>
+          <div class="projects">
+            <div class="proj">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <strong>Personal Portfolio Website</strong>
+                <span class="meta">Front-End Developer</span>
+              </div>
+              <div class="meta">Tools: HTML, CSS, JavaScript</div>
+              <ul style="margin:8px 0 0;color:var(--muted);padding-left:18px">
+                <li>Designed and developed a responsive portfolio to showcase projects and skills.</li>
+                <li>Implemented interactive navigation and smooth scrolling using JavaScript.</li>
+                <li>Improved UI design and front-end development skills.</li>
+              </ul>
+            </div>
+
+            <div class="proj">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <strong>Dual Element MIMO Antenna on FR-4 Substrate for Sub 6 GHz</strong>
+                <span class="meta">Major Project</span>
+              </div>
+              <div class="meta">Tools: Antenna design and analysis (academic)</div>
+              <ul style="margin:8px 0 0;color:var(--muted);padding-left:18px">
+                <li>Designed and analyzed a dual-element MIMO antenna for sub-6 GHz and X-band wireless use.</li>
+                <li>Focused on frequency bands: 1.3 GHz (GNSS), 3.5 GHz (5G), 5 GHz (Wi-Fi), and 7 GHz (future 7G).</li>
+                <li>Used FR-4 substrate for cost-effective fabrication and improved multi-device connectivity.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section class="card" style="margin-top:12px">
+          <h2>Education</h2>
+          <div style="margin-top:6px">
+            <strong>Sri Venkateshwara Engineering College, Tirupati</strong>
+            <div class="meta">B.Tech — Electronics & Communication Engineering, 2021–2025 | CGPA: 7.5</div>
+          </div>
+          <div style="margin-top:10px">
+            <strong>Chaitanya Junior College, Tirupati</strong>
+            <div class="meta">Intermediate (MPC) | CGPA: 8.67</div>
+          </div>
+          <div style="margin-top:10px">
+            <strong>Sri Vani High School, Tadipatri</strong>
+            <div class="meta">SSC | CGPA: 9.8</div>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <!-- Skills -->
+        <section id="skills" class="card">
+          <h2>Skills</h2>
+          <div class="skills">
+            <div class="chip">HTML</div>
+            <div class="chip">CSS</div>
+            <div class="chip">JavaScript</div>
+            <div class="chip">Python</div>
+            <div class="chip">Responsive Design</div>
+            <div class="chip">Flexbox & Grid</div>
+            <div class="chip">OOP Concepts</div>
+          </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="card" style="margin-top:12px">
+          <h2>Certifications</h2>
+          <ul style="color:var(--muted);padding-left:18px;margin:8px 0 0">
+            <li>EXCELR — Hands-on Python for Automation & Logic Building</li>
+            <li>BE10X — AI Tools Workshop</li>
+          </ul>
+        </section>
+
+        <!-- Extracurricular -->
+        <section class="card" style="margin-top:12px">
+          <h2>Extracurricular</h2>
+          <ul style="color:var(--muted);padding-left:18px;margin:8px 0 0">
+            <li>Participated in college hackathons and coding competitions</li>
+            <li>Volunteered at technical fests — communication and leadership experience</li>
+          </ul>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="card" style="margin-top:12px">
+          <h2>Contact</h2>
+          <div style="color:var(--muted);margin-top:6px">
+            <strong>Email</strong><br/>pravallikakummari14@gmail.com
+            <div style="margin-top:8px"><strong>Phone</strong><br/>+91 8688691004</div>
+            <div style="margin-top:8px"><strong>LinkedIn</strong><br/><a href="https://linkedin.com/in/pravallika-kummari-42333724a" style="color:var(--accent);text-decoration:none">linkedin.com/in/pravallika-kummari-42333724a</a></div>
+            <div style="margin-top:8px"><strong>GitHub</strong><br/><a href="https://github.com/pravallika-kummari" style="color:var(--accent);text-decoration:none">github.com/pravallika-kummari</a></div>
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      © 2025 Pravallika Kummari • Built with HTML, CSS, and JavaScript
+    </footer>
+  </div>
+
+  <script>
+    // Smooth scrolling for nav links
+    document.querySelectorAll('nav a[href^="#"]').forEach(link=>{
+      link.addEventListener('click',e=>{
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+      });
+    });
+  </script>
+</body>
+</html>
